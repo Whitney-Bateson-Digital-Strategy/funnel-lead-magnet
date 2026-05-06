@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "src/pages/**/*.{ts,astro}": {
-      "runtime": "nodejs22.x"
-    }
-  }
-}
