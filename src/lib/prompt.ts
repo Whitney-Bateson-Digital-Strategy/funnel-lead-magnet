@@ -162,5 +162,5 @@ Output ONLY valid JSON with this exact shape (no markdown, no preamble, no code 
     "First action: a specific, concrete thing they can do this week to address the most urgent gap. 1-2 sentences. Specific to their situation. Action-oriented.",
     "Second action: a specific, concrete thing they can do this week to address the second most urgent gap. 1-2 sentences. Different in shape from the first action."
   ],
-  "closer": "A 1-2 sentence closing thought from Whitney that hands off to the email sequence without selling. Something like 'I'll be in your inbox over the next few days with more on this.' or 'Keep an eye out for what comes next.' Warm, no pitch."
+  "closer": "A 1-2 sentence closing thought from Whitney that hands off to the email sequence. CRITICAL: Stay vague about what's coming. Do NOT promise specific content (e.g., do NOT say 'I'll send you examples of process-focused lead magnets' or 'I'll show you my framework for X'). The follow-up emails are written separately and may not include what you promise. Safe phrasing: 'I'll be in your inbox over the next few days with more on this.' or 'Keep an eye out for what comes next.' or 'More to come on this in your inbox.' Warm, no pitch, no specifics about what's coming."
 }`;
