@@ -1,0 +1,30 @@
+---
+import HelloBar from '../components/HelloBar.astro';
+import { ReadFlow } from '../components/ReadFlow.jsx';
+import '../styles/global.css';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whitney's Read — What's your lead magnet actually selling?</title>
+    <meta
+      name="description"
+      content="A free tool for dietitians, nutritionists, and private practice clinicians who suspect their freebie is pulling in the wrong people. Built on Whitney Bateson's lead magnet framework."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta property="og:title" content="What's your lead magnet actually selling?" />
+    <meta
+      property="og:description"
+      content="A free read on your funnel from Whitney Bateson. Answer 8 questions, get a personal letter on where your funnel is leaking."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://read.whitneybateson.com" />
+  </head>
+  <body>
+    <HelloBar />
+    <ReadFlow client:load />
+  </body>
+</html>

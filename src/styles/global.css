@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Nunito+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --cream: #efeae3;
+  --cream-deep: #ece1cc;
+  --teal: #02525d;
+  --teal-dark: #013840;
+  --teal-mid: #3a6068;
+  --coral: #ff7f50;
+  --coral-deep: #e66a3d;
+  --blush: #ffcdcd;
+  --blush-light: #ffe6e6;
+  --lime: #e3f696;
+  --sky: #aed3dd;
+  --sky-light: #c8e6ee;
+  --text: #262d32;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.6;
+  background: var(--cream);
+}
+
+body {
+  background: var(--cream);
+  min-height: 100vh;
+}
+
+.display {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+
+.script {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal-mid);
+  font-weight: 600;
+}
+
+.btn {
+  background: var(--teal);
+  color: var(--cream);
+  border: none;
+  padding: 1rem 2rem;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--teal-dark);
+}
+
+.btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.btn-coral {
+  background: var(--lime);
+  color: var(--teal-dark);
+}
+
+.btn-coral:hover:not(:disabled) {
+  background: #d4e878;
+  color: var(--teal-dark);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--teal);
+  border: 1.5px solid var(--teal);
+  padding: 0.85rem 1.5rem;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-ghost:hover {
+  background: var(--teal);
+  color: var(--cream);
+}
+
+@media print {
+  body {
+    background: white;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

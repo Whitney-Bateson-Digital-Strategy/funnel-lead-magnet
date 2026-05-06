@@ -1,0 +1,44 @@
+---
+import HelloBar from '../../components/HelloBar.astro';
+import { ReadView } from '../../components/ReadView.jsx';
+import { supabase } from '../../lib/supabase';
+import '../../styles/global.css';
+
+export const prerender = false;
+
+const { id } = Astro.params;
+
+if (!id) {
+  return Astro.redirect('/');
+}
+
+// Validate UUID format before hitting the DB
+const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+if (!uuidRegex.test(id)) {
+  return Astro.redirect('/');
+}
+
+const { data: read, error } = await supabase
+  .from('reads')
+  .select('first_name, output')
+  .eq('id', id)
+  .single();
+
+if (error || !read) {
+  return Astro.redirect('/');
+}
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whitney's Read for {read.first_name}</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <HelloBar />
+    <ReadView client:load name={read.first_name} report={read.output} />
+  </body>
+</html>
